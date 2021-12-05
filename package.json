@@ -16,7 +16,8 @@
     "pipeline": "yarn install;yarn build"
   },
   "dependencies": {
-    "compass-mixins": "^0.12.10"
+    "compass-mixins": "^0.12.10",
+    "tiny-slider": "^2.9.4"
   },
   "devDependencies": {
     "@babel/core": "^7.7.4",

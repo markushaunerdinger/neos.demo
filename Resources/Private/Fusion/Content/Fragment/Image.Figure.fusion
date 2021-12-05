@@ -28,11 +28,12 @@ prototype(Neos.Demo:Content.Fragment.Image.Figure) < prototype(Neos.Fusion:Compo
 
     renderer = afx`
         <figure class={props.class}>
-            <img src={props.src} title={props.title} alt={props.alt} />
+            <picture>
+                <img src={props.src} title={props.title} alt={props.alt} />
+            </picture>
             <figcaption @if.has={props.hasCaption && props.caption}>
                 {props.caption}
             </figcaption>
         </figure>
     `
 }
-

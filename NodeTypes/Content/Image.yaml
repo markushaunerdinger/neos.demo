@@ -5,6 +5,7 @@
     'Neos.NodeTypes.BaseMixins:ImageCaptionMixin': true
     'Neos.Demo:Constraint.Content.Carousel': true
     'Neos.Demo:Constraint.Content.Column': true
+    'Neos.Demo:Constraint.Content.Slider': true
   ui:
     label: i18n
     icon: 'icon-picture'
