@@ -1,0 +1,17 @@
+##
+# A "Slider" content element that renders "Image" child nodes into a JavaScript based slideshow
+#
+'Neos.Demo:Content.Slider':
+  superTypes:
+    'Neos.Neos:Content': true
+  childNodes:
+    slideritems:
+      type: 'Neos.Demo:Collection.Content.Slider'
+  ui:
+    label: i18n
+    group: 'plugins'
+    icon: 'icon-picture'
+    inlineEditable: true
+'Neos.Demo:Content.Slider.Collection':
+  superTypes:
+    'Neos.Neos:Content': true

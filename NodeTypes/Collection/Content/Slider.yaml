@@ -1,0 +1,10 @@
+##
+# A collection of contents that can be placed in a slider
+#
+'Neos.Demo:Collection.Content.Slider':
+  superTypes:
+    Neos.Neos:ContentCollection: true
+  constraints:
+    nodeTypes:
+      '*': false
+      'Neos.Demo:Constraint.Content.Slider': true

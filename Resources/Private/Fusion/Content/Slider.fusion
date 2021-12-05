@@ -1,0 +1,30 @@
+##
+# "Slider" element
+#
+prototype(Neos.Demo:Content.Slider) < prototype(Neos.Neos:ContentComponent) {
+    identifier = ${'id-' + q(node).property('_identifier')}
+
+    slideritems = Neos.Neos:ContentCollection {
+        nodePath = 'slideritems'
+        attributes.class = 'slider-inner'
+
+        // Each child item is augmented "item" and "active" class
+        prototype(Neos.Neos:ContentCase) {
+            @process.addItemAndActiveClass = Neos.Fusion:Augmenter {
+                class = ${'slider__item' + (iterator.isFirst ? ' active' : '')}
+            }
+        }
+    }
+
+    slideritemnumber = ${q(node).children('slideritems').children().count()}
+
+    renderer = afx`
+        <div>
+            <div class="slider" id={props.identifier}>
+
+                {props.slideritems}
+
+            </div>
+        </div>
+    `
+}
